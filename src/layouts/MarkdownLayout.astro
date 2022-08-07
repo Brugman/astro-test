@@ -1,4 +1,5 @@
 ---
+import Nav from '../components/Nav.astro'
 const {content} = Astro.props;
 ---
 <!DOCTYPE html>
@@ -23,12 +24,7 @@ const {content} = Astro.props;
 </head>
 <body>
 
-<nav>
-    <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-    </ul>
-</nav>
+<Nav></Nav>
 
 <h1>{content.title}</h1>
 
