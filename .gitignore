@@ -1,3 +1,6 @@
+# Sublime Text
+*.sublime-*
+
 # build output
 dist/
 
