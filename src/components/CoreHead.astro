@@ -1,6 +1,8 @@
 ---
-import Nav from '../components/Nav.astro'
-const {content} = Astro.props;
+const { title } = Astro.props;
+
+const site_title = 'Astro Test';
+const page_title = ( title ? title+' - '+site_title : site_title );
 ---
 <!DOCTYPE html>
 <html>
@@ -10,25 +12,13 @@ const {content} = Astro.props;
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- favicon -->
     <link rel="icon" href="data:,">
 
     <!-- title -->
-    <title>{content.title}</title>
-
-    <!-- link css -->
-    <!-- <link rel="stylesheet" href="/assets/app.css"> -->
-
-    <style>
-    </style>
+    <title>{page_title}</title>
 
 </head>
 <body>
 
-<Nav></Nav>
-
-<h1>{content.title}</h1>
-
-<slot></slot>
-
-</body>
-</html>

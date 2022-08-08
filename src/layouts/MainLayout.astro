@@ -1,27 +1,18 @@
 ---
+import '../styles/global.less';
+
+import CoreHead from '../components/CoreHead.astro'
+import CoreFoot from '../components/CoreFoot.astro'
 import Nav from '../components/Nav.astro'
+
+const { title } = Astro.props.content ?? Astro.props;
 ---
-<!DOCTYPE html>
-<html>
-<head>
+<CoreHead title={title} />
 
-    <!-- meta -->
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="data:,">
-
-    <!-- title -->
-    <title>REPLACEME</title>
-
-</head>
-<body>
-
-<Nav></Nav>
+<Nav />
 
 <main>
     <slot></slot>
 </main>
 
-</body>
-</html>
+<CoreFoot />
