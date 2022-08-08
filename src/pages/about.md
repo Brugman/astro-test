@@ -1,5 +1,5 @@
 ---
-layout: ../layouts/MarkdownLayout.astro
+layout: ../layouts/MainLayout.astro
 title: About
 ---
 I am the About page.
