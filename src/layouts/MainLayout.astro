@@ -1,18 +1,25 @@
 ---
 import '../styles/global.less';
 
-import CoreHead from '../components/CoreHead.astro'
-import CoreFoot from '../components/CoreFoot.astro'
-import Nav      from '../components/Nav.astro'
+import Head from '../components/Head.astro'
+import Nav  from '../components/Nav.astro'
 
 const { title } = Astro.props.content ?? Astro.props;
 ---
-<CoreHead title={title} />
+<!DOCTYPE html>
+<html>
+<head>
+
+<Head title={title} />
+
+</head>
+<body>
 
 <Nav />
 
 <main>
-    <slot></slot>
+    <slot />
 </main>
 
-<CoreFoot />
+</body>
+</html>
